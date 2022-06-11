@@ -9,6 +9,11 @@ class CharTracerTest {
 
     @Test
     void testReadFile() {
-        CharTracer charTracer;
+        CharTracer charTracer = new CharTracer();
+        String firstLine = charTracer.getCities().get(0);
+        String lastLine = charTracer.getCities().get(charTracer.cities.size() - 1);
+
+        assertEquals("1500,Beijing,China,672,East Asia", firstLine);
+        assertEquals("2018,Tokyo,Japan,38194,East Asia", lastLine);
     }
 }

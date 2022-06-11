@@ -12,19 +12,28 @@ import java.util.Scanner;
 
 public class CharTracer {
 
-    private List<Data> cities = new ArrayList<>();
+    public List<String> cities = new ArrayList<>();
     List<String> data = new ArrayList<>();
     String nextLine;
 
-    public CharTracer() throws FileNotFoundException {
+    public CharTracer(){
 
-        Scanner scanner = new Scanner(new File("file/cities.txt"));
-        while (scanner.hasNextLine()) {
-            nextLine = scanner.nextLine();
-            if (nextLine.contains(",")){
-                data.add(nextLine.substring(0));
+        try {
+            Scanner scanner = new Scanner(new File("file/cities.txt"));
+            while (scanner.hasNextLine()) {
+                nextLine = scanner.nextLine();
+                if (nextLine.contains(",")){
+                    cities.add(nextLine.substring(0));
+                }
             }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
+
         System.out.println("Done");
+    }
+
+    public List<String> getCities() {
+        return cities;
     }
 }
