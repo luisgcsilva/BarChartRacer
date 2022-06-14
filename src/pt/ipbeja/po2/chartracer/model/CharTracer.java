@@ -12,8 +12,10 @@ import java.util.Scanner;
 
 public class CharTracer {
 
-    public List<String> cities = new ArrayList<>();
+    public ArrayList<String> cities = new ArrayList<>();
+
     List<String> data = new ArrayList<>();
+
     String nextLine;
 
     public CharTracer(){
@@ -33,7 +35,25 @@ public class CharTracer {
         System.out.println("Done");
     }
 
-    public List<String> getCities() {
+    //TO DO
+    public ArrayList<String> getCitiesByYear(String year){
+        ArrayList<String> citiesYear = new ArrayList<>();
+
+        for (int i = 0; i < this.cities.size(); i++)
+        {
+            String string = cities.get(i).substring(0);
+            String result = cities.get(i).substring(0, string.indexOf(','));
+
+            if (result.equals(year))
+            {
+                citiesYear.add(string);
+            }
+        }
+
+        return citiesYear;
+    };
+
+    public ArrayList<String> getCities() {
         return cities;
     }
 }

@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3ab7b48-7920-4a31-ac0f-c3f3f5edf150" name="Changes" comment="Leitura do ficheiro e adição dos dados numa lista.">
+    <list default="true" id="f3ab7b48-7920-4a31-ac0f-c3f3f5edf150" name="Changes" comment="Feitos os testes para a leitura do ficheiro num determinado conjunto de dados, neste caso o ano. Teste de leitura de outros ficheiros.">
+      <change afterPath="$PROJECT_DIR$/file/brands.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file/cities-usa.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file/countries.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file/endgame.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file/football.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file/game-of-thrones.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/CharTracer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/CharTracer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/pt/ipbeja/po2/chartracer/gui/CharTracerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/pt/ipbeja/po2/chartracer/gui/CharTracerTest.java" afterDir="false" />
@@ -28,6 +34,10 @@
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="dd8b6261-5e53-4826-8777-05a734055178" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.jdks/corretto-17.0.3/lib/src.zip!/java.base/java/lang/String.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.jdks/corretto-17.0.3/lib/src.zip!/java.base/java/util/Scanner.java" root0="SKIP_INSPECTION" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -37,37 +47,69 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/luism/Downloads/DispenserMachineSimulatorGP4-noextra/DispenserMachineSimulatorGP4-noextra/DispenserMachineSimulator2021",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/luism/Downloads/DispenserMachineSimulatorGP4-noextra/DispenserMachineSimulatorGP4-noextra/DispenserMachineSimulator2021&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Color Scheme Font&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\OneDrive - Instituto Politecnico de Beja\2_Semestre\PO2\Projeto\19314_LuisSilva_TP_PO2_2021-2022\file" />
       <recent name="D:\OneDrive - Instituto Politecnico de Beja\2_Semestre\PO2\Projeto\19314_LuisSilva_TP_PO2_2021-2022" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CharTracerTest.testReadFile">
+  <component name="RunManager" selected="JUnit.CharTracerTest.testDataFromMoments">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pt.ipbeja.po2.chartracer.gui.CharTracerGUI" />
       <module name="19314_LuisSilva_TP_PO2_2021-2022" />
       <option name="VM_PARAMETERS" value="--module-path C:\javafx-sdk\lib --add-modules=javafx.controls" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CharTracerTest.testDataFromMoments" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="19314_LuisSilva_TP_PO2_2021-2022" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pt.ipbeja.po2.chartracer.gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pt.ipbeja.po2.chartracer.gui" />
+      <option name="MAIN_CLASS_NAME" value="pt.ipbeja.po2.chartracer.gui.CharTracerTest" />
+      <option name="METHOD_NAME" value="testDataFromMoments" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CharTracerTest.testIndexof" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="19314_LuisSilva_TP_PO2_2021-2022" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pt.ipbeja.po2.chartracer.gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pt.ipbeja.po2.chartracer.gui" />
+      <option name="MAIN_CLASS_NAME" value="pt.ipbeja.po2.chartracer.gui.CharTracerTest" />
+      <option name="METHOD_NAME" value="testIndexof" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -90,6 +132,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CharTracerTest.testDataFromMoments" />
+        <item itemvalue="JUnit.CharTracerTest.testIndexof" />
         <item itemvalue="JUnit.CharTracerTest.testReadFile" />
       </list>
     </recent_temporary>
@@ -105,7 +149,10 @@
       <workItem from="1654854944071" duration="5044000" />
       <workItem from="1654860502145" duration="13542000" />
       <workItem from="1654973225258" duration="103000" />
-      <workItem from="1654973374872" duration="796000" />
+      <workItem from="1654973374872" duration="2791000" />
+      <workItem from="1655028726602" duration="260000" />
+      <workItem from="1655031586443" duration="2088000" />
+      <workItem from="1655038667744" duration="2764000" />
     </task>
     <task id="LOCAL-00001" summary="Criação do Projeto">
       <created>1654723018661</created>
@@ -121,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654894712671</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Leitura do ficheiro e adição dos dados numa lista.">
+      <created>1654981776682</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1654981776682</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,6 +195,22 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Criação do Projeto" />
     <MESSAGE value="Leitura do ficheiro e adição dos dados numa lista." />
-    <option name="LAST_COMMIT_MESSAGE" value="Leitura do ficheiro e adição dos dados numa lista." />
+    <MESSAGE value="Feitos os testes para a leitura do ficheiro num determinado conjunto de dados, neste caso o ano. Teste de leitura de outros ficheiros." />
+    <option name="LAST_COMMIT_MESSAGE" value="Feitos os testes para a leitura do ficheiro num determinado conjunto de dados, neste caso o ano. Teste de leitura de outros ficheiros." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/CharTracer.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
