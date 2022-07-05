@@ -1,89 +1,90 @@
 package pt.ipbeja.po2.chartracer.model;
 
 import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.*;
 
-public class ChartRacer {
+import static java.lang.Thread.sleep;
 
-    private ArrayList<Cities> cities;
-    private ReadFile readFile;
+public class ChartRacer{
 
-    public ChartRacer(File file){
-        this.readFile = new ReadFile(file);
-        this.cities = readFile.getCities();
-        this.readFile.readFile(file);
-        this.cities = this.orderList(this.cities);
-        try {
-            writeFile();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+    private View view;
+    private ArrayList<Data> dataArrayList;
+    private WriteDataFile writeDataFile;
+    private ArrayList<String> periods;
+
+    public ChartRacer(View view, File file){
+        this.view = view;
+        this.dataArrayList = ReadFile.readFile(file);
+        this.dataArrayList = this.orderList(this.dataArrayList);
+        //this.writeDataFile = new WriteDataFile(this.dataArrayList);
+        this.periods = this.getPeriods();
+        //this.view.updateBoard("1800");
     }
 
-    public ArrayList<Cities> orderList(ArrayList<Cities> list){
-        int j;
-        for (int i = 1; i < list.size(); i++){
-            Cities key = list.get(i);
-            j = i;
-            while ((j > 0) && list.get(j - 1).population < key.population){
-                if (list.get(j - 1).year.equals(key.year)){
-                    list.set(j, list.get(j - 1));
-                    j--;
-                }
-                else {break;}
-            }
-            list.set(j, key);
-        }
-
-        //Collections.sort(list, Collections.reverseOrder());
-
+    public ArrayList<Data> orderList(ArrayList<Data> list){
+        Collections.sort(list);
         return list;
     }
 
-    public void writeFile() throws IOException {
-        FileWriter fileWriter = new FileWriter("./files/orderedData.txt");
+    public ArrayList<Data> getDatabyDate(String date){
+        ArrayList<Data> dataArrayList = new ArrayList<>();
 
-        for (int i = 0; i < 5; i++) {
-            fileWriter.write(this.cities.get(i).toString() + "\n");
+        for (int i = 0; i < this.dataArrayList.size(); i++) {
+            if (this.dataArrayList.get(i).year.equals(date)) {
+                dataArrayList.add(this.dataArrayList.get(i));
+            }
         }
-        int counter = 0;
-        for (int i = 0; i < this.cities.size(); i++)
+
+        return dataArrayList;
+    }
+
+    public ArrayList<Data> getDataArrayList() {
+        return this.dataArrayList;
+    }
+
+    public ArrayList<String> getPeriods(){
+        ArrayList<String> periods = new ArrayList<>();
+        periods.add(dataArrayList.get(0).year);
+
+        int j = 0;
+
+        for (int i = 1; i < dataArrayList.size(); i++)
         {
-            if (counter < 5)
-            {
-                if (this.cities.get(i).year.equals("2018")){
-                    fileWriter.write(this.cities.get(i).toString() + "\n");
-                    counter++;
-                }
-            } else {
-                break;
+            if (!dataArrayList.get(i).year.equals(periods.get(j))){
+                periods.add(dataArrayList.get(i).year);
+                j++;
             }
         }
-        fileWriter.close();
+
+        return periods;
     }
 
-/*
-    private void readFile(File file){
-        String nextLine;
-
+    private Runnable t1 = () -> {
         try {
-            Scanner scanner = new Scanner(file);
-            while (scanner.hasNextLine()) {
-                nextLine = scanner.nextLine();
-                if (nextLine.contains(",")){
-                    String[] data = nextLine.split(",");
-                    cities.add(new Cities(Integer.parseInt(data[0]), data[1], data[2], Integer.parseInt(data[3]), data[4]));
+            for (int i = 0;  i < periods.size(); i++){
+                this.view.updateBoard(periods.get(i));
+                sleep(200);
+            }
+        } catch (Exception e) {}
+    };
+
+    public void executeNewThread(){
+        executeThread(()-> {
+            for (int i = 0;  i < periods.size(); i++){
+                try {
+                    this.view.updateBoard(periods.get(i));
+                    sleep(200);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
                 }
             }
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+        });
     }
-*/
+
+
+
+    public void executeThread(Runnable runnable) {
+        new Thread(runnable).start();
+    }
 
 }

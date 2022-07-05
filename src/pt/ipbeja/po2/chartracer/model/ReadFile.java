@@ -2,18 +2,17 @@ package pt.ipbeja.po2.chartracer.model;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Scanner;
 
 public class ReadFile {
     File file;
-    public ArrayList<Cities> cities = new ArrayList<>();
+    public static ArrayList<Data> data = new ArrayList<>();
 
     public ReadFile(File file) {
         this.file = file;
     }
 
-    public void readFile(File file){
+    public static ArrayList<Data> readFile(File file){
         String nextLine;
 
         try {
@@ -21,18 +20,14 @@ public class ReadFile {
             while (scanner.hasNextLine()) {
                 nextLine = scanner.nextLine();
                 if (nextLine.contains(",")){
-                    String[] data = nextLine.split(",");
-                    cities.add(new Cities(data[0], data[1], data[2], Integer.parseInt(data[3]), data[4]));
+                    String[] line = nextLine.split(",");
+                    data.add(new Data(line[0], line[1], line[2], Integer.parseInt(line[3]), line[4]));
                 }
             }
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+
+        return data;
     }
-
-    public ArrayList<Cities> getCities() {
-        return this.cities;
-    }
-
-
 }
