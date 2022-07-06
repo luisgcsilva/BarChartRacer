@@ -1,12 +1,7 @@
 package pt.ipbeja.po2.chartracer.gui;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.event.EventTarget;
 import javafx.scene.control.*;
 import pt.ipbeja.po2.chartracer.model.ChartRacer;
-import pt.ipbeja.po2.chartracer.model.View;
-import java.io.File;
 import java.io.IOException;
 
 /**
@@ -20,7 +15,6 @@ public class DataMenu extends MenuBar {
     private final String[] DATA_MENU_ITEMS = new String[]{"Start", "Generate File", "Exit"};
     private Menu menu;
     private MenuItem[] menuItems;
-    private Menu dataFilesMenu;
     private MenuItem startOption;
     private CheckMenuItem generateDataItem;
 

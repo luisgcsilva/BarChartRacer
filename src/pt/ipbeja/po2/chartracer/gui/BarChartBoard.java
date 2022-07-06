@@ -49,7 +49,6 @@ public class BarChartBoard extends Pane implements View {
         this.dataMenu = new DataMenu(this.chartRacer);
         this.getChildren().addAll(dataMenu);
         this.drawBoard();
-        //this.chartRacer.executeNewThread();
     }
 
     /**
@@ -69,7 +68,6 @@ public class BarChartBoard extends Pane implements View {
      * Draws the Axes lines
      */
     private void drawAxes(){
-
         Line xLine = new Line();
         xLine.setStartX(xBorder);
         xLine.setEndX(xScale + xBorder);
