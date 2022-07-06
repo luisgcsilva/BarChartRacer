@@ -1,28 +1,52 @@
 package pt.ipbeja.po2.chartracer.model;
 
+import javafx.scene.paint.Color;
 import java.util.Objects;
 
+/**
+ * @author Luís Gabriel da Cruz Silva
+ * @number 19314
+ * @version 06/07/2022
+ */
+
 public class Data implements Comparable<Data>{
-    public String year;
+    public String date;
     public String city;
     public String country;
-    public int population;
+    public int value;
     public String region;
+    public Color color;
 
-    public Data(String year, String city, String country, int population, String region) {
-        this.year = year;
+    /**
+     * Constructor of the Object Data
+     * @param date
+     * @param city
+     * @param country
+     * @param value
+     * @param region
+     */
+    public Data(String date, String city, String country, int value, String region) {
+        this.date = date;
         this.city = city;
         this.country = country;
-        this.population = population;
+        this.value = value;
         this.region = region;
     }
 
-    public String getYear() {
-        return year;
+    public String getDate() {
+        return date;
     }
 
-    public void setYear(String year) {
-        this.year = year;
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public String getCity() {
@@ -41,12 +65,12 @@ public class Data implements Comparable<Data>{
         this.country = country;
     }
 
-    public int getPopulation() {
-        return population;
+    public int getValue() {
+        return value;
     }
 
-    public void setPopulation(int population) {
-        this.population = population;
+    public void setValue(int value) {
+        this.value = value;
     }
 
     public String getRegion() {
@@ -59,7 +83,7 @@ public class Data implements Comparable<Data>{
 
     @Override
     public String toString() {
-        return year + "," + city + "," + country + "," + population + "," + region;
+        return date + "," + city + "," + country + "," + value + "," + region;
     }
 
     @Override
@@ -67,24 +91,21 @@ public class Data implements Comparable<Data>{
         if (this == o) return true;
         if (!(o instanceof Data)) return false;
         Data data = (Data) o;
-        return population == data.population && Objects.equals(year, data.year) && Objects.equals(city, data.city) && Objects.equals(country, data.country) && Objects.equals(region, data.region);
+        return value == data.value && Objects.equals(date, data.date) && Objects.equals(city, data.city) && Objects.equals(country, data.country) && Objects.equals(region, data.region);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(year, city, country, population, region);
+        return Objects.hash(date, city, country, value, region);
     }
 
     @Override
     public int compareTo(Data data) {
 
-        if (data.getYear().equals(this.getYear())) {
-            return data.getPopulation() - this.getPopulation();
+        if (data.getDate().equals(this.getDate())) {
+            return data.getValue() - this.getValue();
         }
 
         return 0;
-
-                /*(this.getPopulation() < city.getPopulation() ? -1:
-                (this.getPopulation() == city.getPopulation() ? 0 : 1));*/
     }
 }

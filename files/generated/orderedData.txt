@@ -1,0 +1,10 @@
+1880-01-01,John,United States,9655,Male
+1880-01-01,William,United States,9532,Male
+1880-01-01,Mary,United States,7065,Female
+1880-01-01,James,United States,5927,Male
+1880-01-01,Charles,United States,5348,Male
+2018-01-01,Liam,United States,19837,Male
+2018-01-01,Emma,United States,18688,Female
+2018-01-01,Noah,United States,18267,Male
+2018-01-01,Olivia,United States,17921,Female
+2018-01-01,Ava,United States,14924,Female

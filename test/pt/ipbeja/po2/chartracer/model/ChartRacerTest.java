@@ -1,26 +1,28 @@
 package pt.ipbeja.po2.chartracer.model;
 
 import org.junit.jupiter.api.Test;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * @author Luís Gabriel da Cruz Silva
+ * @number 19314
+ * @version 06/07/2022
+ */
+
 class ChartRacerTest {
-/*
+
     @Test
     void testOderData() {
         File file = new File("./files/cities.txt");
-        ReadFile readFile = new ReadFile(file);
-        readFile.readFile(file);
-        ChartRacer chartRacer = new ChartRacer(file);
-        ArrayList<Data> list = chartRacer.orderList(readFile.getCities());
+        ChartRacer chartRacer = new ChartRacer(null, file);
+        ArrayList<Data> list = chartRacer.orderList(chartRacer.getDataArrayList());
         ArrayList<Data> list1500 = new ArrayList<>();
         for(int i = 0; i < list.size(); i++)
         {
-            if (list.get(i).year.equals("1500"))
+            if (list.get(i).date.equals("1500"))
                 list1500.add(list.get(i));
         }
 
@@ -44,7 +46,7 @@ class ChartRacerTest {
 
         for(int i = 0; i < list.size(); i++)
         {
-            if (list.get(i).year.equals("2018"))
+            if (list.get(i).date.equals("2018"))
                 list2018.add(list.get(i));
         }
 
@@ -68,16 +70,13 @@ class ChartRacerTest {
     @Test
     void testWriteOrderedFile() throws IOException {
         File file = new File("./files/cities.txt");
-        ReadFile readFile = new ReadFile(file);
-        readFile.readFile(file);
-        ChartRacer chartRacer = new ChartRacer(file);
-        chartRacer.orderList(readFile.getCities());
-        WriteDataFile writeDataFile = new WriteDataFile(readFile.getCities());
-        writeDataFile.writeFile();
-        File file2 = new File("./files/orderedData.txt");
-        ReadFile readFile1 = new ReadFile(file2);
-        readFile1.readFile(file2);
-        ArrayList<Data> list = readFile1.getCities();
+        ChartRacer chartRacer = new ChartRacer(null, file);
+        chartRacer.orderList(chartRacer.getDataArrayList());
+        WriteFileForTest writeFileForTest = new WriteFileForTest(chartRacer.getDataArrayList());
+        writeFileForTest.writeFile();
+        File file2 = new File("./files/generated/orderedData.txt");
+        ChartRacer chartRacer2 = new ChartRacer(null, file2);
+        ArrayList<Data> list = chartRacer2.getDataArrayListTest();
 
         ArrayList<Data> expectedList = new ArrayList<>();
         expectedList.add(new Data("1500", "Beijing", "China", 672, "East Asia"));
@@ -92,5 +91,5 @@ class ChartRacerTest {
         expectedList.add(new Data("2018", "Mumbai", "India", 22120, "South Asia"));
 
         assertEquals(expectedList, list);
-    }*/
+    }
 }

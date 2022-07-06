@@ -4,20 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3ab7b48-7920-4a31-ac0f-c3f3f5edf150" name="Changes" comment="Feitos os pontos 1 e 2, no 2.1 rever a ordenação.">
-      <change afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/gui/BarChartBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/gui/ChartBar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/WriteDataFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/pt/ipbeja/po2/chartracer/gui/CharTracerTest.java" afterDir="false" />
+    <list default="true" id="f3ab7b48-7920-4a31-ac0f-c3f3f5edf150" name="Changes" comment="Adicionado o menu, os comentários.">
+      <change afterPath="$PROJECT_DIR$/files/datafiles/baby-names.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/datafiles/endgame.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/datafiles/movies.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/generated/orderedData.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/generated/statisticData.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/gui/DataMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/cities.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/cities.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/endgame.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/game-of-thrones.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/gui/ChartRacerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/gui/ChartRacerStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/brands.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/datafiles/brands.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/cities-usa.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/datafiles/cities-usa.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/cities.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/datafiles/cities.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/countries.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/datafiles/countries.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/football.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/datafiles/football.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/orderedData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/gui/BarChartBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/gui/BarChartBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/gui/ChartBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/gui/ChartBar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/gui/ChartRacerStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/gui/ChartRacerStart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/ChartRacer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/ChartRacer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/Cities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/Data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/Data.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/ReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/ReadFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/WriteDataFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/WriteFileForTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/pt/ipbeja/po2/chartracer/gui/CharTracerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto-aval-txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/pt/ipbeja/po2/chartracer/model/ChartRacerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/pt/ipbeja/po2/chartracer/model/ChartRacerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/pt/ipbeja/po2/chartracer/model/ReadFileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/pt/ipbeja/po2/chartracer/model/ReadFileTest.java" afterDir="false" />
     </list>
@@ -29,8 +38,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="JUnit5 Test Class" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -69,7 +78,7 @@
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "D:/OneDrive - Instituto Politecnico de Beja/2_Semestre/PO2/BarChartRacer-master",
+    "last_opened_file_path": "D:/OneDrive - Instituto Politecnico de Beja/2_Semestre/PO2/HoroscopeCreator/HoroscopeCreator/HoroscopeCreator",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -82,6 +91,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\OneDrive - Instituto Politecnico de Beja\2_Semestre\PO2\Projeto\19314_LuisSilva_TP_PO2_2021-2022\files\datasets" />
       <recent name="D:\OneDrive - Instituto Politecnico de Beja\2_Semestre\PO2\Projeto\19314_LuisSilva_TP_PO2_2021-2022\src\pt\ipbeja\po2\chartracer" />
       <recent name="D:\OneDrive - Instituto Politecnico de Beja\2_Semestre\PO2\Projeto\19314_LuisSilva_TP_PO2_2021-2022\file" />
       <recent name="D:\OneDrive - Instituto Politecnico de Beja\2_Semestre\PO2\Projeto\19314_LuisSilva_TP_PO2_2021-2022" />
@@ -93,17 +103,9 @@
       <recent name="pt.ipbeja.po2.chartracer.model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ChartRacerGUI">
-    <configuration name="ChartRacerGUI" type="Application" factoryName="Application">
+  <component name="RunManager" selected="Application.ChartRacerStart">
+    <configuration name="ChartRacerStart" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="pt.ipbeja.po2.chartracer.gui.ChartRacerStart" />
-      <module name="19314_LuisSilva_TP_PO2_2021-2022" />
-      <option name="VM_PARAMETERS" value="--module-path C:\javafx-sdk\lib --add-modules=javafx.controls" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestAnimation" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pt.ipbeja.po2.chartracer.gui.TestAnimation" />
       <module name="19314_LuisSilva_TP_PO2_2021-2022" />
       <option name="VM_PARAMETERS" value="--module-path C:\javafx-sdk\lib --add-modules=javafx.controls" />
       <method v="2">
@@ -191,8 +193,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ChartRacerGUI" />
-      <item itemvalue="Application.TestAnimation" />
+      <item itemvalue="Application.ChartRacerStart" />
       <item itemvalue="JUnit.ChartRacerTest.testDataFromMoments" />
       <item itemvalue="JUnit.ChartRacerTest.testOderData" />
       <item itemvalue="JUnit.ChartRacerTest.testReadFile" />
@@ -201,9 +202,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ChartRacerTest.testWriteOrderedFile" />
-        <item itemvalue="JUnit.ReadFileTest.testReadFile" />
         <item itemvalue="JUnit.ChartRacerTest.testOderData" />
+        <item itemvalue="JUnit.ReadFileTest.testReadFile" />
+        <item itemvalue="JUnit.ChartRacerTest.testWriteOrderedFile" />
         <item itemvalue="JUnit.ChartRacerTest.testReadFile" />
         <item itemvalue="JUnit.ChartRacerTest.testDataFromMoments" />
       </list>
@@ -233,7 +234,8 @@
       <workItem from="1656772666071" duration="22715000" />
       <workItem from="1656843923839" duration="19539000" />
       <workItem from="1656948164821" duration="25462000" />
-      <workItem from="1657022000451" duration="32368000" />
+      <workItem from="1657022000451" duration="36457000" />
+      <workItem from="1657102161866" duration="31537000" />
     </task>
     <task id="LOCAL-00001" summary="Criação do Projeto">
       <created>1654723018661</created>
@@ -270,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656798439274</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Feitos os essenciais todos.">
+      <created>1657064306303</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1657064306303</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,18 +302,11 @@
     <MESSAGE value="Leitura do ficheiro e adição dos dados numa lista." />
     <MESSAGE value="Feitos os testes para a leitura do ficheiro num determinado conjunto de dados, neste caso o ano. Teste de leitura de outros ficheiros." />
     <MESSAGE value="Feitos os pontos 1 e 2, no 2.1 rever a ordenação." />
-    <option name="LAST_COMMIT_MESSAGE" value="Feitos os pontos 1 e 2, no 2.1 rever a ordenação." />
+    <MESSAGE value="Feitos os essenciais todos." />
+    <MESSAGE value="Adicionado o menu, os comentários." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionado o menu, os comentários." />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/gui/BarChartBoard.java</url>
-          <line>107</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="list.get(8)" />
@@ -317,6 +319,9 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/19314_LuisSilva_TP_PO2_2021_2022$ChartRacerTest_testOderData.ic" NAME="ChartRacerTest.testOderData Coverage Results" MODIFIED="1657109196187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>pt.ipbeja.po2.chartracer.model.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/19314_LuisSilva_TP_PO2_2021_2022$ChartRacerGUI.ic" NAME="ChartRacerGUI Coverage Results" MODIFIED="1656785284433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
