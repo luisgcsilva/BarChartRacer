@@ -30,7 +30,7 @@ public class BarChartBoard extends Pane implements View {
     private VBox vBox = new VBox();
     private int xBorder = 50;
     private int xScale = 1200;
-    private final int yScale = 700;
+    private final int yScale = 750;
     private ArrayList<ChartBar> chartBar = new ArrayList<>();
     private ArrayList<Data> dataFromPeriod = new ArrayList<>();
     private ArrayList<Text> labels = new ArrayList<>();
@@ -55,9 +55,12 @@ public class BarChartBoard extends Pane implements View {
      *  Draws the entire board
      */
     public void drawBoard(){
-        this.getChildren().add(dataMenu);
+        this.getChildren().addAll(dataMenu);
         this.vBox.setLayoutY(xBorder);
         this.vBox.setLayoutX(xBorder);
+        Text title = new Text(graphTitle);
+        title.setFont(Font.font(40));
+        this.vBox.getChildren().add(title);
         this.drawAxes();
         this.drawInitialBars();
     }
@@ -73,7 +76,7 @@ public class BarChartBoard extends Pane implements View {
         Line yLine = new Line();
         yLine.setStartX(xBorder);
         yLine.setEndX(xBorder);
-        yLine.setStartY(xBorder);
+        yLine.setStartY(xBorder + 50);
         yLine.setEndY(yScale);
         this.vBox.getChildren().add(xLine);
         this.getChildren().add(yLine);

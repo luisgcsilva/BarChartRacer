@@ -1,5 +1,6 @@
 package pt.ipbeja.po2.chartracer.model;
 
+import javafx.scene.control.Alert;
 import javafx.scene.paint.Color;
 import java.io.File;
 import java.io.FileWriter;
@@ -201,14 +202,9 @@ public class ChartRacer{
     }
 
     private double getAverageNumberLines(){
-        int nLines = 0;
         double averageNumberLines = 0;
 
-        for (int i = 0; i < this.getDates().size(); i++){
-            nLines += this.getDataByDate(this.getDates().get(i)).size();
-        }
-
-        averageNumberLines = nLines / this.getDates().size();
+        averageNumberLines = this.dataArrayList.size() / this.getDates().size();
 
         return averageNumberLines;
     }

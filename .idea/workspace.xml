@@ -5,30 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3ab7b48-7920-4a31-ac0f-c3f3f5edf150" name="Changes" comment="Adicionado o menu, os comentários.">
-      <change afterPath="$PROJECT_DIR$/files/datafiles/baby-names.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/datafiles/endgame.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/datafiles/movies.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/generated/orderedData.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/generated/statisticData.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/gui/DataMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/brands.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/datafiles/brands.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/cities-usa.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/datafiles/cities-usa.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/cities.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/datafiles/cities.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/countries.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/datafiles/countries.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/football.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/datafiles/football.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/orderedData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto-aval-txt" beforeDir="false" afterPath="$PROJECT_DIR$/auto-aval-txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/generated/orderedData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/generated/orderedData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/generated/statisticData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/generated/statisticData.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/gui/BarChartBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/gui/BarChartBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/gui/ChartBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/gui/ChartBar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/gui/ChartRacerStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/gui/ChartRacerStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/gui/DataMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/gui/DataMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/ChartRacer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/ChartRacer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/ReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/ReadFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/WriteDataFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/WriteFileForTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/pt/ipbeja/po2/chartracer/gui/CharTracerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/auto-aval-txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/pt/ipbeja/po2/chartracer/model/ChartRacerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/pt/ipbeja/po2/chartracer/model/ChartRacerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/pt/ipbeja/po2/chartracer/model/ReadFileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/pt/ipbeja/po2/chartracer/model/ReadFileTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +218,7 @@
       <workItem from="1656843923839" duration="19539000" />
       <workItem from="1656948164821" duration="25462000" />
       <workItem from="1657022000451" duration="36457000" />
-      <workItem from="1657102161866" duration="31537000" />
+      <workItem from="1657102161866" duration="34531000" />
     </task>
     <task id="LOCAL-00001" summary="Criação do Projeto">
       <created>1654723018661</created>
@@ -279,7 +262,21 @@
       <option name="project" value="LOCAL" />
       <updated>1657064306303</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Adicionado o menu, os comentários.">
+      <created>1657138522022</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1657138522022</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Adicionado o menu, os comentários.">
+      <created>1657138616442</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1657138616442</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

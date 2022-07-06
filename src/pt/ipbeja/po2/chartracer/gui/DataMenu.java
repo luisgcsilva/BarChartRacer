@@ -51,11 +51,13 @@ public class DataMenu extends MenuBar {
 
     private void generateDataItemHandler(){
         this.menuItems[1].setOnAction(e -> {
-            try {
-                this.chartRacer.generateDataFile();
-            } catch (IOException ex) {
-                throw new RuntimeException(ex);
-            }
+            this.chartRacer.executeThread(()-> {
+                try {
+                    this.chartRacer.generateDataFile();
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
+            });
         });
     }
 
