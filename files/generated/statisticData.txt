@@ -1,6 +1,7 @@
-Number of data sets in file: 1960
-First Date: 1982-01-14
-Last Date: 2019-08-01
-Average number of lines in each data set: 99.0
-Maximum value considering all data sets: 385587621
-Minimum value considering all data sets: 185
+Number of data sets in file: 519
+First Date: 1500
+Last Date: 2018
+Average number of lines in each data set: 12.0
+Number of columns in each data set5
+Maximum value considering all data sets: 38194
+Minimum value considering all data sets: 130

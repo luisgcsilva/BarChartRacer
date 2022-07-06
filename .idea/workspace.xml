@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3ab7b48-7920-4a31-ac0f-c3f3f5edf150" name="Changes" comment="Adicionado o menu, os comentários.">
-      <change afterPath="$PROJECT_DIR$/test/pt/ipbeja/po2/chartracer/model/WriteFileForTestTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/gui/BarChartBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/gui/BarChartBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/gui/DataMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/gui/DataMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/pt/ipbeja/po2/chartracer/model/ChartRacerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/pt/ipbeja/po2/chartracer/model/ChartRacerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/generated/statisticData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/generated/statisticData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/ChartRacer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/ChartRacer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/ReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/ReadFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,30 +45,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "D:/OneDrive - Instituto Politecnico de Beja/2_Semestre/PO2/HoroscopeCreator/HoroscopeCreator/HoroscopeCreator",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/OneDrive - Instituto Politecnico de Beja/2_Semestre/PO2/HoroscopeCreator/HoroscopeCreator/HoroscopeCreator&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\OneDrive - Instituto Politecnico de Beja\2_Semestre\PO2\Projeto\19314_LuisSilva_TP_PO2_2021-2022\files\datasets" />
@@ -84,7 +83,7 @@
       <recent name="pt.ipbeja.po2.chartracer.model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WriteFileForTestTest.testWriteFile">
+  <component name="RunManager" selected="Application.ChartRacerStart">
     <configuration name="ChartRacerStart" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="pt.ipbeja.po2.chartracer.gui.ChartRacerStart" />
       <module name="19314_LuisSilva_TP_PO2_2021-2022" />
@@ -215,7 +214,8 @@
       <workItem from="1656843923839" duration="19539000" />
       <workItem from="1656948164821" duration="25462000" />
       <workItem from="1657022000451" duration="36457000" />
-      <workItem from="1657102161866" duration="38731000" />
+      <workItem from="1657102161866" duration="39060000" />
+      <workItem from="1657147114432" duration="1126000" />
     </task>
     <task id="LOCAL-00001" summary="Criação do Projeto">
       <created>1654723018661</created>
@@ -287,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657146287151</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Adicionado o menu, os comentários.">
+      <created>1657146659507</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1657146659507</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

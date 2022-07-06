@@ -222,10 +222,10 @@ public class ChartRacer{
         fileWriter.write("First Date: " + getDataArrayList().get(0).date + "\n");
         fileWriter.write("Last Date: " + getDataArrayList().get(dataArrayList.size() - 1).date + "\n");
         fileWriter.write("Average number of lines in each data set: " + this.getAverageNumberLines() + "\n");
+        fileWriter.write("Number of columns in each data set: "  + ReadFile.getColumns() + "\n");
         fileWriter.write("Maximum value considering all data sets: " + this.getMaxValue() + "\n");
         fileWriter.write("Minimum value considering all data sets: " + this.getMinValue() + "\n");
 
         fileWriter.close();
     }
-
 }

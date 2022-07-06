@@ -14,6 +14,7 @@ public class ReadFile {
     private static String title = "";
 
     public static ArrayList<Data> data = new ArrayList<>();
+    private static int columns;
 
     /**
      * Constructor of the class ReadFile
@@ -37,8 +38,9 @@ public class ReadFile {
                 nextLine = scanner.nextLine();
                 if (nextLine.contains(",")){
                     String[] line = nextLine.split(",");
+                    columns = line.length;
                     if (line.length > 3){
-                    data.add(new Data(line[0], line[1], line[2], Integer.parseInt(line[3]), line[4]));
+                        data.add(new Data(line[0], line[1], line[2], Integer.parseInt(line[3]), line[4]));
                     }
                 }
                 else
@@ -53,6 +55,8 @@ public class ReadFile {
         }
         return data;
     }
+
+    public static int getColumns(){return columns;}
 
     public static String getTitle(){
         return title;
