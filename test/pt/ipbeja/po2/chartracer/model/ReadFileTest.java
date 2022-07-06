@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ReadFileTest {
     @Test
     void testReadFile() {
-        File file = new File("./files/cities.txt");
+        File file = new File("./files/datafiles/cities.txt");
         ReadFile readFile = new ReadFile(file);
         ArrayList<Data> dataArrayList = readFile.readFile(file);
         ArrayList<Data> cities = new ArrayList<>();

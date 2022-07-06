@@ -12,6 +12,10 @@
       <change beforePath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/gui/BarChartBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/gui/BarChartBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/gui/DataMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/gui/DataMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/ChartRacer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/ChartRacer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/ReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/ReadFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/WriteFileForTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/ipbeja/po2/chartracer/model/WriteFileForTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/pt/ipbeja/po2/chartracer/model/ChartRacerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/pt/ipbeja/po2/chartracer/model/ChartRacerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/pt/ipbeja/po2/chartracer/model/ReadFileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/pt/ipbeja/po2/chartracer/model/ReadFileTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +90,7 @@
       <recent name="pt.ipbeja.po2.chartracer.model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ChartRacerStart">
+  <component name="RunManager" selected="JUnit.ReadFileTest.testReadFile">
     <configuration name="ChartRacerStart" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="pt.ipbeja.po2.chartracer.gui.ChartRacerStart" />
       <module name="19314_LuisSilva_TP_PO2_2021-2022" />
@@ -95,18 +99,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ChartRacerTest.testDataFromMoments" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ChartRacerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="19314_LuisSilva_TP_PO2_2021-2022" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="pt.ipbeja.po2.chartracer.gui.*" />
+          <option name="PATTERN" value="pt.ipbeja.po2.chartracer.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="pt.ipbeja.po2.chartracer.gui" />
-      <option name="MAIN_CLASS_NAME" value="pt.ipbeja.po2.chartracer.gui.ChartRacerTest" />
-      <option name="METHOD_NAME" value="testDataFromMoments" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="pt.ipbeja.po2.chartracer.model" />
+      <option name="MAIN_CLASS_NAME" value="pt.ipbeja.po2.chartracer.model.ChartRacerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -127,22 +130,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ChartRacerTest.testReadFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="19314_LuisSilva_TP_PO2_2021-2022" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pt.ipbeja.po2.chartracer.gui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="pt.ipbeja.po2.chartracer.gui" />
-      <option name="MAIN_CLASS_NAME" value="pt.ipbeja.po2.chartracer.gui.ChartRacerTest" />
-      <option name="METHOD_NAME" value="testReadFile" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ChartRacerTest.testWriteOrderedFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="19314_LuisSilva_TP_PO2_2021-2022" />
       <extension name="coverage">
@@ -155,6 +142,21 @@
       <option name="MAIN_CLASS_NAME" value="pt.ipbeja.po2.chartracer.model.ChartRacerTest" />
       <option name="METHOD_NAME" value="testWriteOrderedFile" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReadFileTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="19314_LuisSilva_TP_PO2_2021-2022" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pt.ipbeja.po2.chartracer.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pt.ipbeja.po2.chartracer.model" />
+      <option name="MAIN_CLASS_NAME" value="pt.ipbeja.po2.chartracer.model.ReadFileTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -177,19 +179,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.ChartRacerStart" />
-      <item itemvalue="JUnit.ChartRacerTest.testDataFromMoments" />
+      <item itemvalue="JUnit.ChartRacerTest" />
+      <item itemvalue="JUnit.ReadFileTest" />
       <item itemvalue="JUnit.ChartRacerTest.testOderData" />
-      <item itemvalue="JUnit.ChartRacerTest.testReadFile" />
       <item itemvalue="JUnit.ChartRacerTest.testWriteOrderedFile" />
       <item itemvalue="JUnit.ReadFileTest.testReadFile" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ChartRacerTest.testOderData" />
         <item itemvalue="JUnit.ReadFileTest.testReadFile" />
+        <item itemvalue="JUnit.ChartRacerTest.testOderData" />
         <item itemvalue="JUnit.ChartRacerTest.testWriteOrderedFile" />
-        <item itemvalue="JUnit.ChartRacerTest.testReadFile" />
-        <item itemvalue="JUnit.ChartRacerTest.testDataFromMoments" />
+        <item itemvalue="JUnit.ChartRacerTest" />
+        <item itemvalue="JUnit.ReadFileTest" />
       </list>
     </recent_temporary>
   </component>
@@ -218,7 +220,7 @@
       <workItem from="1656843923839" duration="19539000" />
       <workItem from="1656948164821" duration="25462000" />
       <workItem from="1657022000451" duration="36457000" />
-      <workItem from="1657102161866" duration="34531000" />
+      <workItem from="1657102161866" duration="38307000" />
     </task>
     <task id="LOCAL-00001" summary="Criação do Projeto">
       <created>1654723018661</created>
@@ -276,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657138616442</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Adicionado o menu, os comentários.">
+      <created>1657142521685</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1657142521685</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

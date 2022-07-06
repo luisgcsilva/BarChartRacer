@@ -11,7 +11,7 @@ import java.util.*;
 
 public class ReadFile {
     private File file;
-    private static String title;
+    private static String title = "";
 
     public static ArrayList<Data> data = new ArrayList<>();
 
@@ -33,7 +33,6 @@ public class ReadFile {
 
         try {
             Scanner scanner = new Scanner(file);
-            title = scanner.nextLine();
             while (scanner.hasNextLine()) {
                 nextLine = scanner.nextLine();
                 if (nextLine.contains(",")){
@@ -42,11 +41,16 @@ public class ReadFile {
                     data.add(new Data(line[0], line[1], line[2], Integer.parseInt(line[3]), line[4]));
                     }
                 }
+                else
+                {
+                    if (title.isEmpty()){
+                        title = nextLine;
+                    }
+                }
             }
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-
         return data;
     }
 

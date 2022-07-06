@@ -47,15 +47,15 @@ public class BarChartBoard extends Pane implements View {
         this.chartRacer = new ChartRacer(this, file);
         this.graphTitle = chartRacer.graphTitle;
         this.dataMenu = new DataMenu(this.chartRacer);
+        this.getChildren().addAll(dataMenu);
         this.drawBoard();
-        this.chartRacer.executeNewThread();
+        //this.chartRacer.executeNewThread();
     }
 
     /**
      *  Draws the entire board
      */
     public void drawBoard(){
-        this.getChildren().addAll(dataMenu);
         this.vBox.setLayoutY(xBorder);
         this.vBox.setLayoutX(xBorder);
         Text title = new Text(graphTitle);

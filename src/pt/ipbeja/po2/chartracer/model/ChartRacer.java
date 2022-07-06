@@ -21,6 +21,7 @@ public class ChartRacer{
     private WriteFileForTest writeFileForTest;
     private ArrayList<String> periods;
     public String graphTitle;
+    private ReadFile readFile;
 
     /**
      * Constructor of the class ChartRacer
@@ -29,10 +30,11 @@ public class ChartRacer{
      */
     public ChartRacer(View view, File file){
         this.view = view;
-        this.dataArrayList = ReadFile.readFile(file);
+        this.readFile = new ReadFile(file);
+        this.dataArrayList = readFile.readFile(file);
         this.dataArrayList = this.orderList(this.dataArrayList);
         this.writeFileForTest = new WriteFileForTest(this.dataArrayList);
-        this.graphTitle = ReadFile.getTitle();
+        this.graphTitle = readFile.getTitle();
         this.periods = this.getDates();
         this.setRegionColor();
     }

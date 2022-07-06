@@ -32,6 +32,7 @@ public class WriteFileForTest {
      */
     public void writeFile() throws IOException {
         FileWriter fileWriter = new FileWriter("./files/generated/orderedData.txt");
+        ArrayList<Data> dataList = new ArrayList<>();
 
         for (int i = 0; i < 5; i++) {
             fileWriter.write(this.data.get(i).toString() + "\n");

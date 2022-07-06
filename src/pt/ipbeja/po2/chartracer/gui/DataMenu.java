@@ -17,57 +17,73 @@ import java.io.IOException;
 
 public class DataMenu extends MenuBar {
     private ChartRacer chartRacer;
-    private BarChartBoard barChartBoard;
-    private final String[] DATA_MENU_ITEMS = new String[]{"Data Files", "Generate File", "Exit"};
-    private final String[] DATA_FILES_MENU_ITEM_TEXT = new String[]{"baby-names", "brands", "cities", "cities-usa", "countries", "endgame", "football"};
+    private final String[] DATA_MENU_ITEMS = new String[]{"Start", "Generate File", "Exit"};
     private Menu menu;
     private MenuItem[] menuItems;
     private Menu dataFilesMenu;
-    private MenuItem[] dataFilesMenuItems;
-    private MenuItem generateDataItem;
+    private MenuItem startOption;
+    private CheckMenuItem generateDataItem;
 
+    /**
+     * Creates the DataMenu
+     * @param chartRacer The model of the program
+     */
     public DataMenu(ChartRacer chartRacer){
         this.chartRacer = chartRacer;
-        this.generateDataItem = new MenuItem("Generate Data");
-        this.dataFilesMenu = new Menu(DATA_MENU_ITEMS[0]);
-        this.dataFilesMenuItems = new MenuItem[DATA_FILES_MENU_ITEM_TEXT.length];
-        this.menuItems = new MenuItem[DATA_MENU_ITEMS.length];
         this.menu = new Menu("Data");
+        this.startOption = new MenuItem("Start");
+        this.generateDataItem = new CheckMenuItem("Generate Data");
+        this.menuItems = new MenuItem[DATA_MENU_ITEMS.length];
         this.setMenuItems();
-        this.setDatasetsMenu();
         this.exitHandler();
+        this.startAnimationHandler();
         this.generateDataItemHandler();
         this.getMenus().add(menu);
     }
 
-    private void setDatasetsMenu(){
-
-        for (int i = 0; i < dataFilesMenuItems.length; i++){
-            dataFilesMenuItems[i] = new MenuItem(DATA_FILES_MENU_ITEM_TEXT[i] + "");
-
-            dataFilesMenu.getItems().add(dataFilesMenuItems[i]);
-        }
-    }
-
+    /**
+     * Handler to generate the file based on the check menu item
+     */
     private void generateDataItemHandler(){
         this.menuItems[1].setOnAction(e -> {
-            this.chartRacer.executeThread(()-> {
+            try {
+                this.chartRacer.generateDataFile();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
+    }
+
+    /**
+     * Handler to start the animation of the graphic
+     */
+    private void startAnimationHandler(){
+        this.menuItems[0].setOnAction(e->{
+            if (this.generateDataItem.isSelected()){
                 try {
                     this.chartRacer.generateDataFile();
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
                 }
-            });
+            }
+            this.chartRacer.executeNewThread();
+            this.menuItems[0].setDisable(true);
         });
     }
 
+    /**
+     * Creates the menu
+     */
     private void setMenuItems(){
-        menuItems[0] = this.dataFilesMenu;
+        menuItems[0] = this.startOption;
         menuItems[1] = this.generateDataItem;
         menuItems[2] = new MenuItem("Exit");
         this.menu.getItems().addAll(menuItems);
     }
 
+    /**
+     * Handler to exit the program
+     */
     private void exitHandler(){
         this.menuItems[2].setOnAction(e -> {
             System.exit(0);

@@ -16,7 +16,7 @@ class ChartRacerTest {
 
     @Test
     void testOderData() {
-        File file = new File("./files/cities.txt");
+        File file = new File("./files/datafiles/cities.txt");
         ChartRacer chartRacer = new ChartRacer(null, file);
         ArrayList<Data> list = chartRacer.orderList(chartRacer.getDataArrayList());
         ArrayList<Data> list1500 = new ArrayList<>();
@@ -69,14 +69,14 @@ class ChartRacerTest {
 
     @Test
     void testWriteOrderedFile() throws IOException {
-        File file = new File("./files/cities.txt");
+        File file = new File("./files/datafiles/cities.txt");
         ChartRacer chartRacer = new ChartRacer(null, file);
         chartRacer.orderList(chartRacer.getDataArrayList());
         WriteFileForTest writeFileForTest = new WriteFileForTest(chartRacer.getDataArrayList());
         writeFileForTest.writeFile();
         File file2 = new File("./files/generated/orderedData.txt");
-        ChartRacer chartRacer2 = new ChartRacer(null, file2);
-        ArrayList<Data> list = chartRacer2.getDataArrayListTest();
+        ChartRacer chartRacer1 = new ChartRacer(null, file2);
+        ArrayList<Data> list = chartRacer1.getDataArrayListTest();
 
         ArrayList<Data> expectedList = new ArrayList<>();
         expectedList.add(new Data("1500", "Beijing", "China", 672, "East Asia"));
