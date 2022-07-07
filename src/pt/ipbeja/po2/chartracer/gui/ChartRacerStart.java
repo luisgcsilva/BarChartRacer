@@ -16,7 +16,7 @@ import java.io.FileNotFoundException;
 
 public class ChartRacerStart extends Application {
 
-    private Stage stage;                // Cria uma variavel do tipo Stage onde se vai mostrar as caixas e os botoes
+    private Stage stage;
     private BarChartBoard barChartBoard;
     private File file;
 
@@ -24,19 +24,18 @@ public class ChartRacerStart extends Application {
         launch(args);
     }
     @Override
-    public void start(Stage primaryStage) throws FileNotFoundException {
-        this.stage = primaryStage;          // Cria o cenário
-        this.stage.setTitle("BarChartRacer");   // Define um titulo para o cenário
+    public void start(Stage primaryStage) {
+        this.stage = primaryStage;
+        this.stage.setTitle("BarChartRacer");
 
-        FileChooser fileChooser = new FileChooser();            // Pede o ficheiro de texto com as listas
-        fileChooser.setTitle("Select the data file");    // Dá um titulo à janela a abrir para escolha do ficheiro
-        fileChooser.setInitialDirectory(new File("./files/datafiles"));   // Define o diretório inicial para escolha de ficheiros
-        this.file = fileChooser.showOpenDialog(primaryStage);   // Apos escolher o ficheiro mostra o cenario compelto
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Select the data file");
+        fileChooser.setInitialDirectory(new File("./files/datafiles"));
+        this.file = fileChooser.showOpenDialog(primaryStage);
 
-        if(this.file == null)
-        {
-            new Alert(Alert.AlertType.ERROR, "No file selected. Exiting.").showAndWait();   // Caso não seja selecionado um ficheiro mostra uma mensagem de erro
-            System.exit(0); // Sai do programa
+        if(this.file == null) {
+            new Alert(Alert.AlertType.ERROR, "No file selected. Exiting.").showAndWait();
+            System.exit(0);
         }
 
         this.barChartBoard = new BarChartBoard(file);

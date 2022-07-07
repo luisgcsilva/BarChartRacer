@@ -14,7 +14,7 @@ public class ChartBar extends Rectangle {
 
     /**
      * Constructor of the object ChartBar
-     * @param width The desired width for the ChartBar
+     * @param width The desired width for the ChartBr
      * @param barColor The desired color for the ChartBar
      */
     public ChartBar(double width, Color barColor){

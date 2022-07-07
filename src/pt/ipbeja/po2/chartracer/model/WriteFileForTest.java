@@ -39,11 +39,9 @@ public class WriteFileForTest {
 
         int counter = 0;
 
-        for (int i = 0; i < this.data.size(); i++)
-        {
-            if (counter < 5)
-            {
-                if (this.data.get(i).getDate().equals(this.data.get(data.size()-1).getDate())){
+        for (int i = 0; i < this.data.size(); i++) {
+            if (counter < 5) {
+                if (this.data.get(i).getDate().equals(this.data.get(data.size()-1).getDate())) {
                     fileWriter.write(this.data.get(i).toString() + "\n");
                     counter++;
                 }

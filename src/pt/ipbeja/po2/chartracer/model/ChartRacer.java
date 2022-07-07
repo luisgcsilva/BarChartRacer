@@ -24,7 +24,7 @@ public class ChartRacer{
      * @param view
      * @param file
      */
-    public ChartRacer(View view, File file){
+    public ChartRacer(View view, File file) {
         this.view = view;
         this.dataArrayList = ReadFile.readFile(file);
         this.dataArrayList = this.orderList(this.dataArrayList);
@@ -37,7 +37,7 @@ public class ChartRacer{
      * @param list The ArrayList to be ordered
      * @return list Returns the list ordered
      */
-    public ArrayList<Data> orderList(ArrayList<Data> list){
+    public ArrayList<Data> orderList(ArrayList<Data> list) {
         Collections.sort(list);
         return list;
     }
@@ -46,16 +46,16 @@ public class ChartRacer{
      * Creates a Map of colors for each region
      * @return Map<String, Color> Returns the Map with the colors for each region
      */
-    public void setRegionColor(){
+    public void setRegionColor() {
         Map<String, Color> colorRegions = new HashMap<>();
 
-        for (Data data : this.dataArrayList){
-            if (colorRegions.isEmpty())
-            {
+        for (Data data : this.dataArrayList) {
+            if (colorRegions.isEmpty()) {
                 colorRegions.put(data.getRegion(), getRandomColor());
             }
             else {
                 int i = 0;
+
                 while (colorRegions.size() > i) {
                     if (!colorRegions.containsKey(data.getRegion())) {
                         colorRegions.put(data.getRegion(), getRandomColor());
@@ -63,9 +63,10 @@ public class ChartRacer{
                     i++;
                 }
             }
-            for (Map.Entry map : colorRegions.entrySet()){
+            for (Map.Entry map : colorRegions.entrySet()) {
                 String key = (String)map.getKey();
-                if (data.getRegion().equals(key)){
+
+                if (data.getRegion().equals(key)) {
                     data.setColor((Color)map.getValue());
                 }
             }
@@ -76,13 +77,14 @@ public class ChartRacer{
      * Generates a random color to the regions
      * @return color Returns a random color
      */
-    private Color getRandomColor(){
+    private Color getRandomColor() {
         Random rand = new Random();
 
         float r = rand.nextFloat();
         float g = rand.nextFloat();
         float b = rand.nextFloat();
         float w = 1;
+
         Color color = new Color(r, g, b, w);
 
         return color;
@@ -93,16 +95,16 @@ public class ChartRacer{
      * @param date The date to get the data
      * @return dataArrayList Returns the ArrayList with the desired data
      */
-    public ArrayList<Data> getDataByDate(String date){
-        ArrayList<Data> dataArrayList = new ArrayList<>();
+    public ArrayList<Data> getDataByDate(String date) {
+        ArrayList<Data> dataList = new ArrayList<>();
 
         for (int i = 0; i < this.dataArrayList.size(); i++) {
             if (this.dataArrayList.get(i).getDate().equals(date)) {
-                dataArrayList.add(this.dataArrayList.get(i));
+                dataList.add(this.dataArrayList.get(i));
             }
         }
 
-        return dataArrayList;
+        return dataList;
     }
 
     /**
@@ -117,9 +119,9 @@ public class ChartRacer{
      * Gets the last 10 items of the ArrayList
      * @return list Returns the list with the last 10 items from the ArrayList
      */
-    public ArrayList<Data> getDataArrayListTest(){
+    public ArrayList<Data> getDataArrayListTest() {
         ArrayList<Data> list = new ArrayList<>();
-        for (int i = this.dataArrayList.size() - 10; i < this.dataArrayList.size(); i++){
+        for (int i = this.dataArrayList.size() - 10; i < this.dataArrayList.size(); i++) {
             list.add(this.dataArrayList.get(i));
         }
         return list;
@@ -129,15 +131,14 @@ public class ChartRacer{
      * Get the dates from the File
      * @return dates Returns a list with the dates
      */
-    public ArrayList<String> getDates(){
+    public ArrayList<String> getDates() {
         ArrayList<String> dates = new ArrayList<>();
         dates.add(this.dataArrayList.get(0).getDate());
 
         int j = 0;
 
-        for (int i = 1; i < this.dataArrayList.size(); i++)
-        {
-            if (!this.dataArrayList.get(i).getDate().equals(dates.get(j))){
+        for (int i = 1; i < this.dataArrayList.size(); i++) {
+            if (!this.dataArrayList.get(i).getDate().equals(dates.get(j))) {
                 dates.add(this.dataArrayList.get(i).getDate());
                 j++;
             }
@@ -148,7 +149,7 @@ public class ChartRacer{
     /**
      * Executes a new Thread to update the board
      */
-    public void executeNewThread(){
+    public void executeNewThread() {
         executeThread(()-> {
             for (int i = 0;  i < periods.size(); i++){
                 try {
@@ -169,8 +170,9 @@ public class ChartRacer{
         new Thread(runnable).start();
     }
 
-    private int getMaxValue(){
+    private int getMaxValue() {
         int maxValue = 0;
+
         for (int i = 0; i < dataArrayList.size(); i++){
             if (dataArrayList.get(i).getValue() > maxValue){
                 maxValue = dataArrayList.get(i).getValue();
@@ -180,15 +182,14 @@ public class ChartRacer{
         return maxValue;
     }
 
-    private int getMinValue(){
+    private int getMinValue() {
         int minValue = 0;
 
         for (int i = 0; i < dataArrayList.size(); i++){
-            if (minValue == 0)
-            {
+            if (minValue == 0) {
                 minValue = dataArrayList.get(i).getValue();
             }
-            if (dataArrayList.get(i).getValue() < minValue){
+            if (dataArrayList.get(i).getValue() < minValue) {
                 minValue = dataArrayList.get(i).getValue();
             }
         }
@@ -196,7 +197,7 @@ public class ChartRacer{
         return minValue;
     }
 
-    private double getAverageNumberLines(){
+    private double getAverageNumberLines() {
         double averageNumberLines = 0;
 
         averageNumberLines = this.dataArrayList.size() / this.getDates().size();

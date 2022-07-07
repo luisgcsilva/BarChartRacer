@@ -55,7 +55,7 @@ public class BarChartBoard extends Pane implements View {
     /**
      *  Draws the entire board
      */
-    public void drawBoard(){
+    public void drawBoard() {
         this.vBox.setLayoutY(xBorder);
         this.vBox.setLayoutX(xBorder);
         Text title = new Text(graphTitle);
@@ -68,7 +68,7 @@ public class BarChartBoard extends Pane implements View {
     /**
      * Draws the Axes lines
      */
-    private void drawAxes(){
+    private void drawAxes() {
         Line xLine = new Line();
         xLine.setStartX(xBorder);
         xLine.setEndX(xScale + xBorder);
@@ -84,8 +84,8 @@ public class BarChartBoard extends Pane implements View {
     /**
      * Draws the Initial Bars on the Graphic
      */
-    private void drawInitialBars(){
-        for (int i = 0; i < NUMBER_OF_BARS; i++){
+    private void drawInitialBars() {
+        for (int i = 0; i < NUMBER_OF_BARS; i++) {
             double width =  this.chartRacer.getDataArrayList().get(i).getValue() * (0.95 * xScale) / this.chartRacer.getDataArrayList().get(0).getValue();
             StackPane stackPane = new StackPane();
             HBox hBox = new HBox();
@@ -107,7 +107,7 @@ public class BarChartBoard extends Pane implements View {
      * Draws the label at the end of the graphic with the period of the current data
      * @param period The period of the current data
      */
-    private void drawLabel(String period){
+    private void drawLabel(String period) {
         this.period.setText(period);
         this.period.setFont(new Font(50));
         HBox hBox = new HBox();
@@ -120,9 +120,9 @@ public class BarChartBoard extends Pane implements View {
      * Updates the bars on the graphic based on the next period
      * @param period The next period from the dataset to be drawn
      */
-    public void updateBoard(String period){
+    public void updateBoard(String period) {
         this.dataFromPeriod = this.chartRacer.getDataByDate(period);
-        for (int i = 0; i < NUMBER_OF_BARS; i++){
+        for (int i = 0; i < NUMBER_OF_BARS; i++) {
             double width = this.dataFromPeriod.get(i).getValue() * (0.95 * xScale) / this.dataFromPeriod.get(0).getValue();
             Timeline animation = new Timeline(
                     new KeyFrame(Duration.millis(50), new KeyValue(this.chartBar.get(i).widthProperty(), width))

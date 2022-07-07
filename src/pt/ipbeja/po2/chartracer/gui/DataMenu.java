@@ -22,7 +22,7 @@ public class DataMenu extends MenuBar {
      * Creates the DataMenu
      * @param chartRacer The model of the program
      */
-    public DataMenu(ChartRacer chartRacer){
+    public DataMenu(ChartRacer chartRacer) {
         this.chartRacer = chartRacer;
         this.menu = new Menu("Data");
         this.startOption = new MenuItem("Start");
@@ -31,27 +31,13 @@ public class DataMenu extends MenuBar {
         this.setMenuItems();
         this.exitHandler();
         this.startAnimationHandler();
-        this.generateDataItemHandler();
         this.getMenus().add(menu);
-    }
-
-    /**
-     * Handler to generate the file based on the check menu item
-     */
-    private void generateDataItemHandler(){
-        this.menuItems[1].setOnAction(e -> {
-            try {
-                this.chartRacer.generateDataFile();
-            } catch (IOException ex) {
-                throw new RuntimeException(ex);
-            }
-        });
     }
 
     /**
      * Handler to start the animation of the graphic
      */
-    private void startAnimationHandler(){
+    private void startAnimationHandler() {
         this.menuItems[0].setOnAction(e->{
             if (this.generateDataItem.isSelected()){
                 try {
@@ -68,7 +54,7 @@ public class DataMenu extends MenuBar {
     /**
      * Creates the menu
      */
-    private void setMenuItems(){
+    private void setMenuItems() {
         menuItems[0] = this.startOption;
         menuItems[1] = this.generateDataItem;
         menuItems[2] = new MenuItem("Exit");
@@ -78,7 +64,7 @@ public class DataMenu extends MenuBar {
     /**
      * Handler to exit the program
      */
-    private void exitHandler(){
+    private void exitHandler() {
         this.menuItems[2].setOnAction(e -> {
             System.exit(0);
         });

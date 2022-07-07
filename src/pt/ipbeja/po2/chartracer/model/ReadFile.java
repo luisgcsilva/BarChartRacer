@@ -30,18 +30,20 @@ public class ReadFile {
 
         try {
             Scanner scanner = new Scanner(file);
+
             while (scanner.hasNextLine()) {
                 nextLine = scanner.nextLine();
-                if (nextLine.contains(",")){
+
+                if (nextLine.contains(",")) {
                     String[] line = nextLine.split(",");
                     columns = line.length;
-                    if (line.length > 3){
+
+                    if (line.length > 3) {
                         data.add(new Data(line[0], line[1], line[2], Integer.parseInt(line[3]), line[4]));
                     }
                 }
-                else
-                {
-                    if (title.isEmpty()){
+                else {
+                    if (title.isEmpty()) {
                         title = nextLine;
                     }
                 }

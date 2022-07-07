@@ -9,7 +9,7 @@ import java.util.Objects;
  * @version 06/07/2022
  */
 
-public class Data implements Comparable<Data>{
+public class Data implements Comparable<Data> {
     private int value;
     private String date;
     private String city;
@@ -38,7 +38,7 @@ public class Data implements Comparable<Data>{
     }
 
     public Color getColor() {
-        return color;
+        return this.color;
     }
 
     public void setColor(Color color) {
@@ -50,7 +50,7 @@ public class Data implements Comparable<Data>{
     }
 
     public String getCity() {
-        return city;
+        return this.city;
     }
 
     public void setCity(String city) {
@@ -58,7 +58,7 @@ public class Data implements Comparable<Data>{
     }
 
     public String getCountry() {
-        return country;
+        return this.country;
     }
 
     public void setCountry(String country) {
@@ -66,7 +66,7 @@ public class Data implements Comparable<Data>{
     }
 
     public int getValue() {
-        return value;
+        return this.value;
     }
 
     public void setValue(int value) {
@@ -74,7 +74,7 @@ public class Data implements Comparable<Data>{
     }
 
     public String getRegion() {
-        return region;
+        return this.region;
     }
 
     public void setRegion(String region) {
@@ -83,7 +83,7 @@ public class Data implements Comparable<Data>{
 
     @Override
     public String toString() {
-        return date + "," + city + "," + country + "," + value + "," + region;
+        return this.date + "," + this.city + "," + this.country + "," + this.value + "," + this.region;
     }
 
     @Override
@@ -91,12 +91,13 @@ public class Data implements Comparable<Data>{
         if (this == o) return true;
         if (!(o instanceof Data)) return false;
         Data data = (Data) o;
-        return value == data.value && Objects.equals(date, data.date) && Objects.equals(city, data.city) && Objects.equals(country, data.country) && Objects.equals(region, data.region);
+        return this.value == data.value && Objects.equals(this.date, data.date) && Objects.equals(this.city, data.city) &&
+                Objects.equals(this.country, data.country) && Objects.equals(this.region, data.region);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(date, city, country, value, region);
+        return Objects.hash(this.date, this.city, this.country, this.value, this.region);
     }
 
     @Override
