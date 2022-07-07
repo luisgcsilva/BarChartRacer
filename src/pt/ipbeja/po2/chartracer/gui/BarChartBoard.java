@@ -29,8 +29,8 @@ public class BarChartBoard extends Pane implements View {
     private final int NUMBER_OF_BARS = 12;
     private ChartRacer chartRacer;
     private VBox vBox = new VBox();
-    private int xBorder = 50;
-    private int xScale = 1200;
+    private final int xBorder = 50;
+    private final int xScale = 1200;
     private final int yScale = 750;
     private ArrayList<ChartBar> chartBar = new ArrayList<>();
     private ArrayList<Data> dataFromPeriod = new ArrayList<>();
