@@ -10,12 +10,12 @@ import java.util.Objects;
  */
 
 public class Data implements Comparable<Data>{
-    public String date;
-    public String city;
-    public String country;
-    public int value;
-    public String region;
-    public Color color;
+    private int value;
+    private String date;
+    private String city;
+    private String country;
+    private String region;
+    private Color color;
 
     /**
      * Constructor of the Object Data

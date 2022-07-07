@@ -18,7 +18,7 @@ public class ChartRacerStart extends Application {
 
     private Stage stage;                // Cria uma variavel do tipo Stage onde se vai mostrar as caixas e os botoes
     private BarChartBoard barChartBoard;
-    File file;
+    private File file;
 
     public static void main(String[] args) {
         launch(args);

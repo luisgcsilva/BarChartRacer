@@ -15,8 +15,7 @@ class ReadFileTest {
     @Test
     void testReadFile() {
         File file = new File("./files/datafiles/cities.txt");
-        ReadFile readFile = new ReadFile(file);
-        ArrayList<Data> dataArrayList = readFile.readFile(file);
+        ArrayList<Data> dataArrayList = ReadFile.readFile(file);
         ArrayList<Data> cities = new ArrayList<>();
 
         cities.add(new Data("1500", "Beijing", "China", 672, "East Asia"));

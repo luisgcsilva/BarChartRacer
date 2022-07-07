@@ -15,13 +15,9 @@ import static java.lang.Thread.sleep;
  */
 
 public class ChartRacer{
-
     private View view;
     private ArrayList<Data> dataArrayList;
-    private WriteFileForTest writeFileForTest;
     private ArrayList<String> periods;
-    public String graphTitle;
-    private ReadFile readFile;
 
     /**
      * Constructor of the class ChartRacer
@@ -30,11 +26,8 @@ public class ChartRacer{
      */
     public ChartRacer(View view, File file){
         this.view = view;
-        this.readFile = new ReadFile(file);
-        this.dataArrayList = readFile.readFile(file);
+        this.dataArrayList = ReadFile.readFile(file);
         this.dataArrayList = this.orderList(this.dataArrayList);
-        this.writeFileForTest = new WriteFileForTest(this.dataArrayList);
-        this.graphTitle = readFile.getTitle();
         this.periods = this.getDates();
         this.setRegionColor();
     }
@@ -104,7 +97,7 @@ public class ChartRacer{
         ArrayList<Data> dataArrayList = new ArrayList<>();
 
         for (int i = 0; i < this.dataArrayList.size(); i++) {
-            if (this.dataArrayList.get(i).date.equals(date)) {
+            if (this.dataArrayList.get(i).getDate().equals(date)) {
                 dataArrayList.add(this.dataArrayList.get(i));
             }
         }
@@ -138,14 +131,14 @@ public class ChartRacer{
      */
     public ArrayList<String> getDates(){
         ArrayList<String> dates = new ArrayList<>();
-        dates.add(this.dataArrayList.get(0).date);
+        dates.add(this.dataArrayList.get(0).getDate());
 
         int j = 0;
 
         for (int i = 1; i < this.dataArrayList.size(); i++)
         {
-            if (!this.dataArrayList.get(i).date.equals(dates.get(j))){
-                dates.add(this.dataArrayList.get(i).date);
+            if (!this.dataArrayList.get(i).getDate().equals(dates.get(j))){
+                dates.add(this.dataArrayList.get(i).getDate());
                 j++;
             }
         }
@@ -179,8 +172,8 @@ public class ChartRacer{
     private int getMaxValue(){
         int maxValue = 0;
         for (int i = 0; i < dataArrayList.size(); i++){
-            if (dataArrayList.get(i).value > maxValue){
-                maxValue = dataArrayList.get(i).value;
+            if (dataArrayList.get(i).getValue() > maxValue){
+                maxValue = dataArrayList.get(i).getValue();
             }
         }
 
@@ -193,10 +186,10 @@ public class ChartRacer{
         for (int i = 0; i < dataArrayList.size(); i++){
             if (minValue == 0)
             {
-                minValue = dataArrayList.get(i).value;
+                minValue = dataArrayList.get(i).getValue();
             }
-            if (dataArrayList.get(i).value < minValue){
-                minValue = dataArrayList.get(i).value;
+            if (dataArrayList.get(i).getValue() < minValue){
+                minValue = dataArrayList.get(i).getValue();
             }
         }
 
@@ -219,8 +212,8 @@ public class ChartRacer{
         FileWriter fileWriter = new FileWriter("./files/generated/statisticData.txt");
 
         fileWriter.write("Number of data sets in file: " + getDates().size() + "\n");
-        fileWriter.write("First Date: " + getDataArrayList().get(0).date + "\n");
-        fileWriter.write("Last Date: " + getDataArrayList().get(dataArrayList.size() - 1).date + "\n");
+        fileWriter.write("First Date: " + getDataArrayList().get(0).getDate() + "\n");
+        fileWriter.write("Last Date: " + getDataArrayList().get(dataArrayList.size() - 1).getDate() + "\n");
         fileWriter.write("Average number of lines in each data set: " + this.getAverageNumberLines() + "\n");
         fileWriter.write("Number of columns in each data set: "  + ReadFile.getColumns() + "\n");
         fileWriter.write("Maximum value considering all data sets: " + this.getMaxValue() + "\n");

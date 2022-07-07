@@ -32,7 +32,6 @@ public class WriteFileForTest {
      */
     public void writeFile() throws IOException {
         FileWriter fileWriter = new FileWriter("./files/generated/orderedData.txt");
-        ArrayList<Data> dataList = new ArrayList<>();
 
         for (int i = 0; i < 5; i++) {
             fileWriter.write(this.data.get(i).toString() + "\n");
@@ -44,7 +43,7 @@ public class WriteFileForTest {
         {
             if (counter < 5)
             {
-                if (this.data.get(i).date.equals(this.data.get(data.size()-1).date)){
+                if (this.data.get(i).getDate().equals(this.data.get(data.size()-1).getDate())){
                     fileWriter.write(this.data.get(i).toString() + "\n");
                     counter++;
                 }

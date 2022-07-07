@@ -10,18 +10,14 @@ import java.util.*;
  */
 
 public class ReadFile {
-    private File file;
     private static String title = "";
-
-    public static ArrayList<Data> data = new ArrayList<>();
+    private static ArrayList<Data> data = new ArrayList<>();
     private static int columns;
 
     /**
      * Constructor of the class ReadFile
-     * @param file The File to be read
      */
-    public ReadFile(File file) {
-        this.file = file;
+    public ReadFile() {
     }
 
     /**

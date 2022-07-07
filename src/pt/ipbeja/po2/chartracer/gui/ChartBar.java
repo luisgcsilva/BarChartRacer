@@ -13,7 +13,7 @@ public class ChartBar extends Rectangle {
     private final int height = 50;
 
     /**
-     * Cronstructor of the object ChartBar
+     * Constructor of the object ChartBar
      * @param width The desired width for the ChartBar
      * @param barColor The desired color for the ChartBar
      */

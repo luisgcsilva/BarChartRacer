@@ -14,6 +14,7 @@ import javafx.scene.text.Text;
 import javafx.util.Duration;
 import pt.ipbeja.po2.chartracer.model.ChartRacer;
 import pt.ipbeja.po2.chartracer.model.Data;
+import pt.ipbeja.po2.chartracer.model.ReadFile;
 import pt.ipbeja.po2.chartracer.model.View;
 import java.io.File;
 import java.util.ArrayList;
@@ -45,7 +46,7 @@ public class BarChartBoard extends Pane implements View {
      */
     public BarChartBoard(File file) {
         this.chartRacer = new ChartRacer(this, file);
-        this.graphTitle = chartRacer.graphTitle;
+        this.graphTitle = ReadFile.getTitle();
         this.dataMenu = new DataMenu(this.chartRacer);
         this.getChildren().addAll(dataMenu);
         this.drawBoard();
@@ -85,11 +86,11 @@ public class BarChartBoard extends Pane implements View {
      */
     private void drawInitialBars(){
         for (int i = 0; i < NUMBER_OF_BARS; i++){
-            double width =  this.chartRacer.getDataArrayList().get(i).value * (0.95 * xScale) / this.chartRacer.getDataArrayList().get(0).value;
+            double width =  this.chartRacer.getDataArrayList().get(i).getValue() * (0.95 * xScale) / this.chartRacer.getDataArrayList().get(0).getValue();
             StackPane stackPane = new StackPane();
             HBox hBox = new HBox();
-            this.labels.add(new Text(this.chartRacer.getDataArrayList().get(i).city));
-            this.numbers.add(new Text(String.valueOf(this.chartRacer.getDataArrayList().get(i).value)));
+            this.labels.add(new Text(this.chartRacer.getDataArrayList().get(i).getCity()));
+            this.numbers.add(new Text(String.valueOf(this.chartRacer.getDataArrayList().get(i).getValue())));
             stackPane.setAlignment(this.labels.get(i), Pos.CENTER_RIGHT);
             this.chartBar.add(new ChartBar(width, this.chartRacer.getDataArrayList().get(i).getColor()));
             stackPane.setAlignment(Pos.BASELINE_LEFT);
@@ -99,7 +100,7 @@ public class BarChartBoard extends Pane implements View {
             this.vBox.getChildren().add(hBox);
         }
         this.getChildren().add(vBox);
-        this.drawLabel(this.chartRacer.getDataArrayList().get(0).date);
+        this.drawLabel(this.chartRacer.getDataArrayList().get(0).getDate());
     }
 
     /**
@@ -122,14 +123,14 @@ public class BarChartBoard extends Pane implements View {
     public void updateBoard(String period){
         this.dataFromPeriod = this.chartRacer.getDataByDate(period);
         for (int i = 0; i < NUMBER_OF_BARS; i++){
-            double width = this.dataFromPeriod.get(i).value * (0.95 * xScale) / this.dataFromPeriod.get(0).value;
+            double width = this.dataFromPeriod.get(i).getValue() * (0.95 * xScale) / this.dataFromPeriod.get(0).getValue();
             Timeline animation = new Timeline(
                     new KeyFrame(Duration.millis(50), new KeyValue(this.chartBar.get(i).widthProperty(), width))
             );
             this.chartBar.get(i).updateWidth(width);
             this.chartBar.get(i).setFill(dataFromPeriod.get(i).getColor());
-            this.numbers.get(i).setText(String.valueOf(this.dataFromPeriod.get(i).value));
-            this.labels.get(i).setText(this.dataFromPeriod.get(i).city);
+            this.numbers.get(i).setText(String.valueOf(this.dataFromPeriod.get(i).getValue()));
+            this.labels.get(i).setText(this.dataFromPeriod.get(i).getCity());
             this.period.setText(period);
             animation.play();
         }

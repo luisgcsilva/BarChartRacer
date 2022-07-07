@@ -30,7 +30,7 @@ class ChartRacerTest {
 
         for(int i = 0; i < list.size(); i++)
         {
-            if (list.get(i).date.equals("1500"))
+            if (list.get(i).getDate().equals("1500"))
                 list1500.add(list.get(i));
         }
 
@@ -54,7 +54,7 @@ class ChartRacerTest {
 
         for(int i = 0; i < list.size(); i++)
         {
-            if (list.get(i).date.equals("2018"))
+            if (list.get(i).getDate().equals("2018"))
                 list2018.add(list.get(i));
         }
 
